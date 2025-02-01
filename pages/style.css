@@ -14,6 +14,13 @@ body { height: 100%;
 position: relative;
 
 }
+
+inicio img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
 main { 
     display:grid;
     min-height: 100dvh;
@@ -46,11 +53,8 @@ main .caja1{
     color:#d77362;
     display: block;
     text-align: center;
- }
-
- 
-
-
+    padding: 1rem 0;
+}
 /* Crochet */
 
 .titulos {
@@ -125,32 +129,26 @@ grid-template-rows: repeat (3, 20%) ;
     }
 
     @media (min-width: 1024px) {
-        main{
-            grid-template-columns: repeat(3, 1fr) ;
-            grid-template-rows: repeat(5, 20%)
-                   column-gap: 0.5 rem; 
-                  
-                }
-
-    
-
-        main .caja1{
+        main {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            column-gap: 0.5rem;
+        }
+        main .caja1 {
             display: block;
-        }
-        main .caja1{
             grid-column: 1;
-            grid-row:  1;
+            grid-row: 1;
         }
-
-        main .caja2{
+        main .caja2 {
             grid-column: span 2;
             grid-row: span 1;
         }
-            main .caja3{
-                grid-column: span 3;
-                grid-row: span 2} 
-
-        main .caja4{
-            grid-column: span 4;
-                grid-row: span 3} 
-
+        main .caja3 {
+            grid-column: span 3;
+            grid-row: span 2;
+        }
+        main .caja4 {
+            grid-column: span 3;
+            grid-row: span 3;
+        }
+    
